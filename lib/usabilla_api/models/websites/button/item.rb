@@ -6,8 +6,8 @@ module UsabillaApi
           attr_accessor :id, :name
 
           def initialize(args = {})
-            @id     = args['id']    || ''
-            @name   = args['name']  || ''
+            @id     = args.with_indifferent_access['id']    || ''
+            @name   = args.with_indifferent_access['name']  || ''
           end
         end
       end

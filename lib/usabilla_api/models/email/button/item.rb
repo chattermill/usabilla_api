@@ -6,12 +6,12 @@ module UsabillaApi
           attr_accessor :id, :date, :groups, :intro_text, :locale, :name
 
           def initialize(args = {})
-            @id             = args['id']                  || ''
-            @date           = args['date']                || ''
-            @groups         = add_groups(args['groups'])  || {}
-            @intro_text     = args['introText']           || ''
-            @locale         = args['locale']              || ''
-            @name           = args['name']                || ''
+            @id             = args.with_indifferent_access['id']                  || ''
+            @date           = args.with_indifferent_access['date']                || ''
+            @groups         = add_groups(args.with_indifferent_access['groups'])  || {}
+            @intro_text     = args.with_indifferent_access['introText']           || ''
+            @locale         = args.with_indifferent_access['locale']              || ''
+            @name           = args.with_indifferent_access['name']                || ''
           end
 
           private

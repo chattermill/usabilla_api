@@ -6,11 +6,11 @@ module UsabillaApi
           attr_accessor :city, :country, :lat, :lon, :region
 
           def initialize(args = {})
-            @city      = args['city']      || ''
-            @country   = args['country']   || ''
-            @lat       = args['lat']       || nil
-            @lon       = args['lon']       || nil
-            @region    = args['region']    || ''
+            @city      = args.with_indifferent_access['city']      || ''
+            @country   = args.with_indifferent_access['country']   || ''
+            @lat       = args.with_indifferent_access['lat']       || nil
+            @lon       = args.with_indifferent_access['lon']       || nil
+            @region    = args.with_indifferent_access['region']    || ''
           end
 
         end
