@@ -23,4 +23,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'simplecov', '~> 0.7', '>= 0.7.1'
   s.add_development_dependency 'rspec', '~> 2.14'
   s.add_development_dependency 'rspec-pride', '~> 2.2', '>= 2.2.0'
+  s.add_development_dependency 'activesupport', '~> 4.2', '>= 4.2.0'
 end
