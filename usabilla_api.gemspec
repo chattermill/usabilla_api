@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.files        = Dir['{lib}/**/*.rb', 'LICENSE', '*.md']
   s.require_path = 'lib'
 
-  s.add_dependency 'rest-client', '>= 2.0'
+  s.add_dependency 'rest-client', '>= 1.7'
   s.add_dependency 'json', '~> 1.8.1'
 
 
