@@ -38,12 +38,12 @@ module UsabillaApi
           private
 
           def add_data(hash)
-            hash.map{ |group| UsabillaApi::Models::Apps::Feedback::Data.new(group) } unless hash.nil?
-          end
-          def add_geo_location(hash)
-            hash.map{ |group| UsabillaApi::Models::Apps::Feedback::GeoLocation.new(group) } unless hash.nil?
+            [UsabillaApi::Models::Apps::Feedback::Data.new(hash)] unless hash.nil?
           end
 
+          def add_geo_location(hash)
+            [UsabillaApi::Models::Apps::Feedback::GeoLocation.new(hash)] unless hash.nil?
+          end
         end
       end
     end
