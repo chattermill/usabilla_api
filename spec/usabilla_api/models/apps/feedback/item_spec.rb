@@ -44,7 +44,7 @@ module UsabillaApi
             it { expect(feedback.timestamp).to eq('timestamp') }
             it { expect(feedback.device_name).to eq('device_name') }
             it { expect(feedback.data).to eq(data_hash) }
-            it { expect(feedback.custom_data).to eq({}) }
+            it { expect(feedback.custom).to eq({}) }
             it { expect(feedback.app_id).to eq('app_id') }
             it { expect(feedback.app_name).to eq('app_name') }
             it { expect(feedback.app_version).to eq('app_version') }

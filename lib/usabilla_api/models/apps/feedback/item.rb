@@ -3,7 +3,7 @@ module UsabillaApi
     module Apps
       module Feedback
         class Item
-          attr_accessor :id, :date, :timestamp, :device_name, :data, :custom_data, :app_id, :app_name, :app_version, :os_name,
+          attr_accessor :id, :date, :timestamp, :device_name, :data, :custom, :app_id, :app_name, :app_version, :os_name,
                         :os_version, :location, :geo_location, :free_memory, :total_memory, :free_storage, :total_storage,
                         :screenshot, :screensize, :connection, :ip_address, :language, :orientation, :battery_level, :rooted
 
@@ -13,7 +13,7 @@ module UsabillaApi
             @timestamp        = args.with_indifferent_access['timestamp']                         || ''
             @device_name      = args.with_indifferent_access['deviceName']                        || ''
             @data             = args.with_indifferent_access['data']                              || {}
-            @custom_data      = args.with_indifferent_access['customData']                        || {}
+            @custom           = args.with_indifferent_access['customData']                        || {}
             @app_id           = args.with_indifferent_access['appId']                             || ''
             @app_name         = args.with_indifferent_access['appName']                           || ''
             @app_version      = args.with_indifferent_access['appVersion']                        || ''
