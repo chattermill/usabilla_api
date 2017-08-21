@@ -79,7 +79,7 @@ module UsabillaApi
     end
 
     def sub_query_id(uri)
-      uri.gsub(':id', @query_id)
+      uri.gsub(':id', CGI.escape(@query_id))
     end
 
     def since_filter(amount)
