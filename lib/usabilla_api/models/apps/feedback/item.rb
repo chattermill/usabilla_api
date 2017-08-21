@@ -11,16 +11,16 @@ module UsabillaApi
             @id               = args.with_indifferent_access['id']                                || ''
             @date             = args.with_indifferent_access['date']                              || ''
             @timestamp        = args.with_indifferent_access['timestamp']                         || ''
-            @device_name       = args.with_indifferent_access['deviceName']                        || ''
-            @data             = add_data(args.with_indifferent_access['data'])                    || []
-            @custom           = args.with_indifferent_access['custom']                            || []
+            @device_name      = args.with_indifferent_access['deviceName']                        || ''
+            @data             = args.with_indifferent_access['data']                              || {}
+            @custom           = args.with_indifferent_access['customData']                        || {}
             @app_id           = args.with_indifferent_access['appId']                             || ''
             @app_name         = args.with_indifferent_access['appName']                           || ''
             @app_version      = args.with_indifferent_access['appVersion']                        || ''
             @os_name          = args.with_indifferent_access['osName']                            || ''
             @os_version       = args.with_indifferent_access['osVersion']                         || ''
             @location         = args.with_indifferent_access['location']                          || ''
-            @geo_location     = add_geo_location(args.with_indifferent_access['geoLocation'])     || []
+            @geo_location     = args.with_indifferent_access['geoLocation']                       || {}
             @free_memory      = args.with_indifferent_access['freeMemory']                        || nil
             @total_memory     = args.with_indifferent_access['totalMemory']                       || nil
             @free_storage     = args.with_indifferent_access['freeStorage']                       || nil
@@ -33,16 +33,6 @@ module UsabillaApi
             @orientation      = args.with_indifferent_access['orientation']                       || ''
             @battery_level    = args.with_indifferent_access['batteryLevel']                      || nil
             @rooted           = args.with_indifferent_access['rooted']                            || false
-          end
-
-          private
-
-          def add_data(hash)
-            [UsabillaApi::Models::Apps::Feedback::Data.new(hash)] unless hash.nil?
-          end
-
-          def add_geo_location(hash)
-            [UsabillaApi::Models::Apps::Feedback::GeoLocation.new(hash)] unless hash.nil?
           end
         end
       end
