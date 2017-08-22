@@ -63,6 +63,8 @@ module UsabillaApi
             it { expect(feedback.orientation).to eq('orientation') }
             it { expect(feedback.battery_level).to eq('battery_level') }
             it { expect(feedback.rooted).to eq(true) }
+            it { expect(feedback.raw_data).to eq(feedback_hash) }
+
           end
         end
       end
