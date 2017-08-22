@@ -3,15 +3,17 @@ module UsabillaApi
     module Email
       module Button
         class Item
-          attr_accessor :id, :date, :groups, :intro_text, :locale, :name
+          attr_accessor :id, :date, :groups, :intro_text, :locale, :name,
+                        :raw_data
 
           def initialize(args = {})
-            @id             = args.with_indifferent_access['id']                  || ''
-            @date           = args.with_indifferent_access['date']                || ''
-            @groups         = add_groups(args.with_indifferent_access['groups'])  || {}
-            @intro_text     = args.with_indifferent_access['introText']           || ''
-            @locale         = args.with_indifferent_access['locale']              || ''
-            @name           = args.with_indifferent_access['name']                || ''
+            @raw_data       = args.with_indifferent_access
+            @id             = raw_data['id']                  || ''
+            @date           = raw_data['date']                || ''
+            @groups         = add_groups(raw_data['groups'])  || {}
+            @intro_text     = raw_data['introText']           || ''
+            @locale         = raw_data['locale']              || ''
+            @name           = raw_data['name']                || ''
           end
 
           private
