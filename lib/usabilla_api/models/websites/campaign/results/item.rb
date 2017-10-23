@@ -4,9 +4,10 @@ module UsabillaApi
       module Campaign
         module Results
           class Item
-            attr_accessor :id, :user_agent, :location, :date, :campaign_id, :custom, :data, :url, :time
+            attr_accessor :id, :user_agent, :location, :date, :campaign_id, :custom, :data, :url, :time, :raw_data
 
             def initialize(args = {})
+              @raw_data       = args.with_indifferent_access
               @id             = args.with_indifferent_access['id']          || ''
               @user_agent     = args.with_indifferent_access['userAgent']   || ''
               @location       = args.with_indifferent_access['location']    || ''
