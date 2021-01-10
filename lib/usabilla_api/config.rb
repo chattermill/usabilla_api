@@ -43,6 +43,7 @@ module UsabillaApi
       @uri_websites_campaign              ||= '/websites/campaign'
       @uri_websites_campaign_results      ||= '/websites/campaign/:id/results'
       @uri_websites_campaign_stats        ||= '/websites/campaign/:id/stats'
+      @uri_websites_inpage_feedback       ||= '/websites/inpage/:id/feedback'
     end
 
     def set_attr_accessors

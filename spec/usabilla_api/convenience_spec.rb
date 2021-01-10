@@ -65,6 +65,11 @@ module UsabillaApi
         expect_method_to_return_class(:websites_campaign, UsabillaApi::Clients::Websites::Campaign)
       end
     end
+    context '#inpage_feedback' do
+      it 'returns the inpage_feedback client class' do
+        expect_method_to_return_class(:inpage_feedback, UsabillaApi::Clients::Websites::InpageFeedback)
+      end
+    end
     context '#websites_campaign_results' do
       it 'returns the websites_campaign_results client class' do
         expect_method_to_return_class(:websites_campaign_results, UsabillaApi::Clients::Websites::CampaignResults)

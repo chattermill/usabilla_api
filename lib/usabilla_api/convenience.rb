@@ -38,6 +38,10 @@ module UsabillaApi
         UsabillaApi::Clients::Websites::Feedback
       end
 
+      def inpage_feedback
+        UsabillaApi::Clients::Websites::InpageFeedback
+      end
+
       def websites_campaign
         UsabillaApi::Clients::Websites::Campaign
       end
