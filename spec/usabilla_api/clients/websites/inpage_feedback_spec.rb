@@ -6,8 +6,9 @@ module UsabillaApi
     let(:params) { { 'id' => '12345' } }
     let(:response) { UsabillaApi::Clients::Websites::InpageFeedback.retrieve(params) }
     let(:feedback_json){ { items: [{ id: '1234567890', userAgent: 'Agent', comment: 'Feedback',
-                                     location: 'Atlanta', date: '01012015', custom: {}, data: {},
-                                     mood: 3, nps: 5, rating: 3, widgetId: '1234567890', geo: {} }],
+                                     location: 'Atlanta', date: '01012015', customData: {}, data: {},
+                                     mood: 3, nps: 5, rating: 3, widgetId: '1234567890', geo: {},
+                                     url: 'http://foo.com' }],
                            count: 1, hasMore: false, lastTimestamp: 1234567890 }.to_json }
 
     describe '#retrieve' do

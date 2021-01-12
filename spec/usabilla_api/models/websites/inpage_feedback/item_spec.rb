@@ -16,12 +16,13 @@ module UsabillaApi
                   'location' => 'Atlanta',
                   'geo' => {},
                   'date' => '01012015',
-                  'custom' => {},
+                  'customData' => {},
                   'nps' => 0,
                   'mood' => 3,
                   'rating' => 2,
                   'widgetId' => '1234567890',
-                  'data' => {}
+                  'data' => {},
+                  'url' => 'http://foo.com'
               }
             end
 
@@ -37,6 +38,7 @@ module UsabillaApi
             it { expect(feedback.mood).to eq (3) }
             it { expect(feedback.rating).to eq (2) }
             it { expect(feedback.widget_id).to eq ('1234567890') }
+            it { expect(feedback.public_url).to eq ('http://foo.com') }
           end
         end
       end
